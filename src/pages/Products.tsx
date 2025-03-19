@@ -54,7 +54,6 @@ const Products = () => {
                         <p className="text-muted-foreground mb-4">
                           Experimente o melhor da tecnologia com nosso smartphone de última geração, câmera profissional e bateria de longa duração.
                         </p>
-                        <p className="text-troiton-blue font-semibold mb-4">A partir de R$ {1999 + (item * 300)}</p>
                         <a href="#" className="inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue">
                           Ver detalhes <ArrowRight size={16} className="ml-2" />
                         </a>
@@ -77,7 +76,6 @@ const Products = () => {
                             ? 'Ideal para trabalho e produtividade, com processador potente e design ultrafino.' 
                             : 'Projetado para gamers exigentes, com gráficos impressionantes e refrigeração avançada.'}
                         </p>
-                        <p className="text-troiton-blue font-semibold mb-4">A partir de R$ {3499 + (item * 500)}</p>
                         <a href="#" className="inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue">
                           Ver detalhes <ArrowRight size={16} className="ml-2" />
                         </a>
@@ -105,7 +103,6 @@ const Products = () => {
                             ? 'Cancelamento de ruído ativo e qualidade de som excepcional para uma experiência imersiva.' 
                             : 'Som potente e de alta definição, perfeita para festas e ambientes amplos.'}
                         </p>
-                        <p className="text-troiton-blue font-semibold mb-4">A partir de R$ {item % 2 === 0 ? 899 + (item * 100) : 499 + (item * 100)}</p>
                         <a href="#" className="inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue">
                           Ver detalhes <ArrowRight size={16} className="ml-2" />
                         </a>
@@ -127,7 +124,6 @@ const Products = () => {
                         <p className="text-muted-foreground mb-4">
                           Monitore sua saúde, atividades físicas e receba notificações diretamente no seu pulso.
                         </p>
-                        <p className="text-troiton-blue font-semibold mb-4">A partir de R$ {1299 + (item * 200)}</p>
                         <a href="#" className="inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue">
                           Ver detalhes <ArrowRight size={16} className="ml-2" />
                         </a>
@@ -148,7 +144,6 @@ const Products = () => {
                         <p className="text-muted-foreground mb-4">
                           Imagem ultra HD, sistema smart intuitivo e design slim que se adapta a qualquer ambiente.
                         </p>
-                        <p className="text-troiton-blue font-semibold mb-4">A partir de R$ {2499 + (item * 800)}</p>
                         <a href="#" className="inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue">
                           Ver detalhes <ArrowRight size={16} className="ml-2" />
                         </a>
@@ -175,7 +170,6 @@ const Products = () => {
                               ? "Amplie o sinal Wi-Fi para áreas com conectividade fraca." 
                               : "Gerencie sua rede doméstica com controle inteligente de tráfego."}
                         </p>
-                        <p className="text-troiton-blue font-semibold mb-4">A partir de R$ {799 + (item * 200)}</p>
                         <a href="#" className="inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue">
                           Ver detalhes <ArrowRight size={16} className="ml-2" />
                         </a>
