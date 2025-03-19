@@ -8,7 +8,7 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Troiton Connect+ | Your Bridge to Technology";
+    document.title = "Troiton Connect+ | Sua Ponte para a Tecnologia";
   }, []);
 
   return (

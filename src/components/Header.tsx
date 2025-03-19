@@ -1,14 +1,15 @@
 
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "Solutions", href: "#solutions" },
-  { name: "Mission", href: "#mission" },
-  { name: "Products", href: "#products" },
-  { name: "Contact", href: "#contact" },
+  { name: "Início", href: "/" },
+  { name: "Soluções", href: "/#solutions" },
+  { name: "Missão", href: "/#mission" },
+  { name: "Produtos", href: "/produtos" },
+  { name: "Contato", href: "/contato" },
 ];
 
 export function Header() {
@@ -35,8 +36,8 @@ export function Header() {
     >
       <div className="troiton-container">
         <div className="flex items-center justify-between">
-          <a 
-            href="#home" 
+          <Link 
+            to="/" 
             className="flex items-center gap-2 group"
           >
             <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-troiton-blue to-troiton-purple flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105">
@@ -45,28 +46,39 @@ export function Header() {
             <span className="font-bold text-xl tracking-tight text-troiton-dark">
               Troiton<span className="text-troiton-purple">Connect+</span>
             </span>
-          </a>
+          </Link>
 
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="relative text-sm font-medium text-troiton-dark transition-colors hover:text-troiton-purple group"
-              >
-                {link.name}
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-troiton-purple transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </a>
+              link.href.startsWith('/') ? (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="relative text-sm font-medium text-troiton-dark transition-colors hover:text-troiton-purple group"
+                >
+                  {link.name}
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-troiton-purple transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                </Link>
+              ) : (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="relative text-sm font-medium text-troiton-dark transition-colors hover:text-troiton-purple group"
+                >
+                  {link.name}
+                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-troiton-purple transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                </a>
+              )
             ))}
           </nav>
 
           <div className="hidden md:flex">
-            <a 
-              href="#contact" 
+            <Link 
+              to="/contato" 
               className="bg-gradient-to-r from-troiton-blue to-troiton-purple hover:from-troiton-lightblue hover:to-troiton-lightpurple text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-300 button-effect"
             >
-              Get Started
-            </a>
+              Começar Agora
+            </Link>
           </div>
 
           <button
@@ -87,22 +99,33 @@ export function Header() {
       >
         <div className="p-6 space-y-4">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="block py-2 text-base font-medium text-troiton-dark hover:text-troiton-purple"
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </a>
+            link.href.startsWith('/') ? (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="block py-2 text-base font-medium text-troiton-dark hover:text-troiton-purple"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ) : (
+              <a
+                key={link.name}
+                href={link.href}
+                className="block py-2 text-base font-medium text-troiton-dark hover:text-troiton-purple"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            )
           ))}
-          <a
-            href="#contact"
+          <Link
+            to="/contato"
             className="block w-full bg-gradient-to-r from-troiton-blue to-troiton-purple text-white font-medium px-6 py-3 rounded-lg text-center mt-6"
             onClick={() => setIsOpen(false)}
           >
-            Get Started
-          </a>
+            Começar Agora
+          </Link>
         </div>
       </div>
     </header>
