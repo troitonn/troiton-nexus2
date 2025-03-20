@@ -2,19 +2,52 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const navLinks = [
   { name: "Início", href: "/" },
-  { name: "Soluções", href: "/#solutions" },
-  { name: "Missão", href: "/#mission" },
-  { name: "Produtos", href: "/produtos" },
+  { 
+    name: "Produtos", 
+    href: "#",
+    children: [
+      { name: "Periféricos", description: "Teclados, mouses, fones de ouvido, etc.", href: "/produtos#perifericos" },
+      { name: "Hardware", description: "Processadores, placas de vídeo, memória RAM", href: "/produtos#hardware" },
+      { name: "Notebooks", description: "Notebooks para trabalho e jogos", href: "/produtos#notebooks" },
+      { name: "Equipamentos para Empresas", description: "Impressoras, monitores, nobreaks, etc.", href: "/produtos#empresa" },
+      { name: "Games", description: "Jogos digitais para todos os tipos de jogadores", href: "/produtos#games" },
+    ]
+  },
+  { 
+    name: "Soluções", 
+    href: "#", 
+    children: [
+      { name: "Para Empresas (B2B)", description: "Soluções tecnológicas para otimizar seu negócio", href: "/#solutions" },
+      { name: "Para Consumidores (B2C)", description: "Produtos e serviços para o consumidor final", href: "/#business-segments" },
+    ]
+  },
+  { name: "Sobre Nós", href: "/#mission" },
   { name: "Contato", href: "/contato" },
 ];
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,8 +63,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "py-3 bg-white/90 backdrop-blur-md shadow-sm" 
-          : "py-5 bg-transparent"
+          ? "py-2 bg-white/90 backdrop-blur-md shadow-sm" 
+          : "py-4 bg-transparent"
       )}
     >
       <div className="troiton-container">
@@ -48,29 +81,49 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              link.href.startsWith('/') ? (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="relative text-sm font-medium text-troiton-dark transition-colors hover:text-troiton-purple group"
-                >
-                  {link.name}
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-troiton-purple transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                </Link>
-              ) : (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="relative text-sm font-medium text-troiton-dark transition-colors hover:text-troiton-purple group"
-                >
-                  {link.name}
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-troiton-purple transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-                </a>
-              )
-            ))}
-          </nav>
+          {!isMobile && (
+            <NavigationMenu className="hidden md:flex">
+              <NavigationMenuList>
+                {navLinks.map((link) => (
+                  link.children ? (
+                    <NavigationMenuItem key={link.name}>
+                      <NavigationMenuTrigger className="bg-transparent hover:bg-troiton-gray/50 hover:text-troiton-purple">
+                        {link.name}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                          {link.children.map((child) => (
+                            <li key={child.name}>
+                              <NavigationMenuLink asChild>
+                                <Link
+                                  to={child.href}
+                                  className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-troiton-gray/50 hover:text-troiton-purple"
+                                >
+                                  <div className="text-sm font-medium leading-none">{child.name}</div>
+                                  <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                                    {child.description}
+                                  </p>
+                                </Link>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  ) : (
+                    <NavigationMenuItem key={link.name}>
+                      <Link 
+                        to={link.href}
+                        className="relative inline-flex h-10 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-troiton-gray/50 hover:text-troiton-purple"
+                      >
+                        {link.name}
+                      </Link>
+                    </NavigationMenuItem>
+                  )
+                ))}
+              </NavigationMenuList>
+            </NavigationMenu>
+          )}
 
           <div className="hidden md:flex">
             <Link 
@@ -97,9 +150,31 @@ export function Header() {
           isOpen ? "translate-y-0" : "-translate-y-full"
         )}
       >
-        <div className="p-6 space-y-4">
+        <div className="p-6 space-y-2">
           {navLinks.map((link) => (
-            link.href.startsWith('/') ? (
+            link.children ? (
+              <div key={link.name} className="py-2">
+                <DropdownMenu>
+                  <DropdownMenuTrigger className="flex items-center justify-between w-full text-base font-medium text-troiton-dark hover:text-troiton-purple">
+                    {link.name}
+                    <ChevronDown size={16} />
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    {link.children.map((child) => (
+                      <DropdownMenuItem key={child.name} asChild>
+                        <Link
+                          to={child.href}
+                          className="w-full"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {child.name}
+                        </Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              </div>
+            ) : (
               <Link
                 key={link.name}
                 to={link.href}
@@ -108,15 +183,6 @@ export function Header() {
               >
                 {link.name}
               </Link>
-            ) : (
-              <a
-                key={link.name}
-                href={link.href}
-                className="block py-2 text-base font-medium text-troiton-dark hover:text-troiton-purple"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
             )
           ))}
           <Link
