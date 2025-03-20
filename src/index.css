@@ -133,6 +133,34 @@
   .animate-delay-1000 {
     animation-delay: 1000ms;
   }
+  
+  /* Card hover effects */
+  .glow-card {
+    @apply relative overflow-hidden;
+  }
+  
+  .glow-card::before {
+    content: '';
+    @apply absolute -inset-0.5 bg-gradient-to-r from-troiton-blue via-troiton-purple to-troiton-blue rounded-xl opacity-0 blur transition-opacity duration-300;
+  }
+  
+  .glow-card:hover::before {
+    @apply opacity-70;
+  }
+  
+  /* Float animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
 }
 
 /* Touch area improvements for mobile */
