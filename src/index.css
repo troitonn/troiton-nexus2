@@ -53,6 +53,23 @@
     @apply bg-white text-troiton-dark antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
+  
+  /* Add some tech-inspired patterns and elements */
+  .tech-pattern-dots {
+    background-image: radial-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .tech-pattern-grid {
+    background-image: 
+      linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  
+  .tech-gradient {
+    background: linear-gradient(110deg, #1a5177 0%, #8A00C3 100%);
+  }
 }
 
 @layer components {
@@ -88,6 +105,44 @@
 
   .button-effect:hover::after {
     @apply opacity-100;
+  }
+  
+  /* New cheerful components */
+  .pulse-border {
+    @apply relative;
+  }
+  
+  .pulse-border::before {
+    content: '';
+    @apply absolute -inset-0.5 rounded-xl bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 transition-opacity duration-300;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .pulse-border:hover::before {
+    @apply opacity-100;
+  }
+  
+  .tech-icon-container {
+    @apply relative flex items-center justify-center;
+  }
+  
+  .tech-icon-container::before {
+    content: '';
+    @apply absolute inset-0 rounded-full bg-gradient-to-br from-troiton-blue/20 to-troiton-purple/20 blur-sm;
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* Enhanced animations */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+  
+  .hover-glow {
+    @apply transition-shadow duration-300;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 15px rgba(138, 0, 195, 0.4);
   }
 
   /* Mobile optimizations */
@@ -160,6 +215,26 @@
   
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Shimmer animation */
+  @keyframes shimmer {
+    0%, 100% {
+      background-position: -100% 0;
+    }
+    50% {
+      background-position: 200% 0;
+    }
+  }
+  
+  .animate-shimmer {
+    background: linear-gradient(90deg, 
+      rgba(255, 255, 255, 0) 0%, 
+      rgba(255, 255, 255, 0.2) 25%, 
+      rgba(255, 255, 255, 0.2) 50%, 
+      rgba(255, 255, 255, 0) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
   }
 }
 
