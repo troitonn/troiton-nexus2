@@ -24,20 +24,18 @@ const Index = () => {
         <section id="business-segments" className="py-16 md:py-20 bg-gradient-to-b from-white to-troiton-gray/20 relative overflow-hidden">
           {/* Digital circuit background pattern */}
           <div className="absolute inset-0 tech-pattern-dots opacity-5"></div>
-          <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 right-10 w-40 h-40 bg-purple-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-10 left-10 w-32 h-32 bg-blue-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-purple-400/10 rounded-full blur-3xl"></div>
           
           <div className="troiton-container">
             <FadeIn>
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Server className="text-troiton-purple h-6 w-6 animate-pulse" />
                 <h2 className="section-title text-center text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
                   Segmentos de Atuação
                 </h2>
-                <Server className="text-troiton-blue h-6 w-6 animate-pulse" />
               </div>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
-                Tecnologia especializada para cada setor do mercado
+                Soluções tecnológicas especializadas para cada setor do mercado
               </p>
             </FadeIn>
             
@@ -54,14 +52,12 @@ const Index = () => {
           <div className="troiton-container relative z-10">
             <FadeIn>
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Code className="text-troiton-blue h-6 w-6 animate-pulse" />
                 <h2 className="section-title text-center text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
-                  Soluções Inovadoras
+                  Soluções Integradas
                 </h2>
-                <Code className="text-troiton-purple h-6 w-6 animate-pulse" />
               </div>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
-                Tecnologias revolucionárias que transformam negócios e experiências digitais
+                Tecnologias que transformam negócios e elevam experiências digitais
               </p>
             </FadeIn>
             
@@ -80,14 +76,12 @@ const Index = () => {
           <div className="troiton-container relative z-10">
             <FadeIn>
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Globe className="text-troiton-purple h-6 w-6 animate-pulse" />
                 <h2 className="section-title text-center text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
                   Nossa Trajetória
                 </h2>
-                <Globe className="text-troiton-blue h-6 w-6 animate-pulse" />
               </div>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
-                Conheça nossa história de inovação e compromisso com a excelência tecnológica
+                Uma história de inovação e compromisso com a excelência tecnológica
               </p>
             </FadeIn>
             
@@ -100,18 +94,13 @@ const Index = () => {
         <section id="clients" className="py-16 md:py-20 bg-gradient-to-br from-troiton-blue/5 to-troiton-purple/5 relative overflow-hidden">
           {/* Digital circuit background elements */}
           <div className="absolute inset-0 tech-pattern-grid opacity-10"></div>
-          <div className="absolute top-20 right-40 w-4 h-4 rounded-full bg-blue-400/30 animate-pulse"></div>
-          <div className="absolute top-40 left-20 w-6 h-6 rounded-full bg-purple-400/30 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-          <div className="absolute bottom-40 right-60 w-3 h-3 rounded-full bg-blue-400/30 animate-pulse" style={{ animationDelay: '1s' }}></div>
           
           <div className="troiton-container relative z-10">
             <FadeIn>
               <div className="flex items-center justify-center gap-2 mb-2">
-                <ShieldCheck className="text-troiton-blue h-6 w-6 animate-pulse" />
                 <h2 className="section-title text-center text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
                   Empresas que Confiam em Nós
                 </h2>
-                <ShieldCheck className="text-troiton-purple h-6 w-6 animate-pulse" />
               </div>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
                 Parceiros de negócios que transformaram suas operações com nossas soluções

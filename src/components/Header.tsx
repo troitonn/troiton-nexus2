@@ -108,7 +108,7 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "py-2 bg-white/90 backdrop-blur-md shadow-sm" 
+          ? "py-2 bg-white/95 backdrop-blur-lg shadow-md" 
           : "py-4 bg-transparent"
       )}
     >
@@ -118,7 +118,7 @@ export function Header() {
             to="/" 
             className="flex items-center gap-2 group"
           >
-            <div className="h-9 w-9 rounded-lg bg-gradient-to-br from-troiton-blue to-troiton-purple flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105">
+            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-troiton-blue to-troiton-purple flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105">
               <span className="text-white font-bold text-xl">T</span>
             </div>
             <span className="font-bold text-xl tracking-tight text-troiton-dark">
@@ -180,7 +180,7 @@ export function Header() {
           <div className="hidden md:flex">
             <Link 
               to="/contato" 
-              className="bg-gradient-to-r from-troiton-blue to-troiton-purple hover:from-troiton-lightblue hover:to-troiton-lightpurple text-white font-medium px-6 py-2.5 rounded-full transition-all duration-300 button-effect flex items-center gap-2"
+              className="bg-gradient-to-r from-troiton-blue to-troiton-purple hover:opacity-90 text-white font-medium px-6 py-2.5 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center gap-2"
             >
               <Star className="h-4 w-4" />
               Começar Agora
@@ -199,7 +199,7 @@ export function Header() {
       {/* Mobile menu */}
       <div
         className={cn(
-          "md:hidden fixed inset-x-0 bg-white/95 backdrop-blur-md shadow-lg transition-transform duration-300 ease-in-out z-40",
+          "md:hidden fixed inset-x-0 bg-white/95 backdrop-blur-lg shadow-lg transition-transform duration-300 ease-in-out z-40",
           isOpen ? "translate-y-0" : "-translate-y-full"
         )}
       >
@@ -245,7 +245,7 @@ export function Header() {
           ))}
           <Link
             to="/contato"
-            className="block w-full bg-gradient-to-r from-troiton-blue to-troiton-purple text-white font-medium px-6 py-3 rounded-full text-center mt-6 flex items-center justify-center gap-2"
+            className="block w-full bg-gradient-to-r from-troiton-blue to-troiton-purple text-white font-medium px-6 py-3 rounded-lg text-center mt-6 flex items-center justify-center gap-2 shadow-md"
             onClick={() => setIsOpen(false)}
           >
             <Star className="h-4 w-4" />
