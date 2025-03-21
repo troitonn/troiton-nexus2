@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FadeIn } from "./animations/FadeIn";
-import { Building, Users, ShoppingCart, Package, Gamepad, ArrowRight } from "lucide-react";
+import { Building, ShoppingCart, Package, Gamepad, ArrowRight, Server, Monitor, Printer, Cpu } from "lucide-react";
 
 export function BusinessSegments() {
   return (
@@ -27,28 +27,28 @@ export function BusinessSegments() {
               <div className="h-14 w-14 rounded-lg bg-troiton-blue/10 flex items-center justify-center mb-5">
                 <Building size={28} className="text-troiton-blue" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Soluções Empresariais</h3>
+              <h3 className="text-xl font-semibold mb-3">Soluções B2B</h3>
               <p className="text-muted-foreground flex-grow mb-6">
-                Infraestrutura tecnológica, soluções de software e serviços de consultoria personalizados para empresas de todos os portes.
+                Equipamentos, periféricos e soluções para empresas, incluindo impressoras, cadeiras de escritório e infraestrutura completa.
               </p>
               <div className="space-y-4 mb-6">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 rounded-full bg-troiton-blue/20 flex items-center justify-center mt-0.5">
                     <span className="h-2 w-2 rounded-full bg-troiton-blue"></span>
                   </div>
-                  <span className="ml-3 text-sm">Infraestrutura de TI</span>
+                  <span className="ml-3 text-sm">Computadores e Servidores</span>
                 </div>
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 rounded-full bg-troiton-blue/20 flex items-center justify-center mt-0.5">
                     <span className="h-2 w-2 rounded-full bg-troiton-blue"></span>
                   </div>
-                  <span className="ml-3 text-sm">Soluções de Software</span>
+                  <span className="ml-3 text-sm">Impressoras e Scanners</span>
                 </div>
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 rounded-full bg-troiton-blue/20 flex items-center justify-center mt-0.5">
                     <span className="h-2 w-2 rounded-full bg-troiton-blue"></span>
                   </div>
-                  <span className="ml-3 text-sm">Consultoria Empresarial</span>
+                  <span className="ml-3 text-sm">Mobiliário e Equipamentos</span>
                 </div>
               </div>
               <Link to="/contato" className="group inline-flex items-center text-sm font-medium text-troiton-blue hover:text-troiton-purple mt-auto">
@@ -62,7 +62,7 @@ export function BusinessSegments() {
               <div className="h-14 w-14 rounded-lg bg-troiton-purple/10 flex items-center justify-center mb-5">
                 <ShoppingCart size={28} className="text-troiton-purple" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">Produtos para Consumidores</h3>
+              <h3 className="text-xl font-semibold mb-3">Soluções B2C</h3>
               <p className="text-muted-foreground flex-grow mb-6">
                 Os mais recentes produtos tecnológicos para uso diário, de smartphones e laptops a dispositivos para casa inteligente e acessórios.
               </p>

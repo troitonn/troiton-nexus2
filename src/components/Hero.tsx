@@ -1,7 +1,7 @@
 
 import React from "react";
 import { FadeIn } from "./animations/FadeIn";
-import { ArrowRight, Cpu, Zap, Globe, Database } from "lucide-react";
+import { ArrowRight, Cpu, Server, Monitor, Printer, PlugZap, Shield, Database } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Hero() {
@@ -23,7 +23,7 @@ export function Hero() {
         <div className="flex flex-col items-center justify-center text-center">
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-sm font-medium bg-gradient-to-r from-troiton-blue/10 to-troiton-purple/10 rounded-full">
-              <Zap size={16} className="text-troiton-purple" />
+              <Server size={16} className="text-troiton-purple" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
                 Tecnologia de Ponta para a Transformação Digital
               </span>
@@ -68,29 +68,75 @@ export function Hero() {
               </div>
               
               <div className="relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-6">
-                  <div className="flex flex-col items-center hover-lift hover-glow transition-all duration-300">
-                    <div className="tech-icon-container h-14 w-14 rounded-full bg-gradient-to-br from-blue-400/20 to-blue-600/20 flex items-center justify-center mb-4">
-                      <Zap size={28} className="text-blue-500" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-6">
+                  {/* Tecnologia Empresarial - Redesenhado */}
+                  <div className="flex flex-col hover-lift hover-glow transition-all duration-300 p-6 bg-gradient-to-br from-troiton-blue/5 to-troiton-blue/10 rounded-xl border border-troiton-blue/10">
+                    <div className="flex items-center mb-4">
+                      <div className="tech-icon-container h-14 w-14 rounded-xl bg-gradient-to-br from-blue-400/20 to-blue-600/20 flex items-center justify-center mr-4">
+                        <Server size={28} className="text-blue-500" />
+                      </div>
+                      <h3 className="text-xl font-semibold">Tecnologia Empresarial</h3>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Tecnologia Empresarial</h3>
-                    <p className="text-center text-sm text-muted-foreground">Infraestrutura, cloud computing e soluções personalizadas para otimizar processos de negócio</p>
+                    
+                    <p className="text-muted-foreground mb-6">Equipamentos, periféricos e soluções de infraestrutura completas para empresas de todos os portes</p>
+                    
+                    <div className="grid grid-cols-2 gap-3 mb-6">
+                      <div className="flex items-center">
+                        <Monitor size={18} className="text-blue-500 mr-2" />
+                        <span className="text-sm">Computadores</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Printer size={18} className="text-blue-500 mr-2" />
+                        <span className="text-sm">Impressoras</span>
+                      </div>
+                      <div className="flex items-center">
+                        <PlugZap size={18} className="text-blue-500 mr-2" />
+                        <span className="text-sm">Periféricos</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Shield size={18} className="text-blue-500 mr-2" />
+                        <span className="text-sm">Segurança</span>
+                      </div>
+                    </div>
+                    
+                    <Link to="/produtos" className="group inline-flex items-center text-sm font-medium text-troiton-blue hover:text-troiton-purple mt-auto">
+                      Explorar soluções empresariais <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+                    </Link>
                   </div>
 
-                  <div className="flex flex-col items-center hover-lift hover-glow transition-all duration-300">
-                    <div className="tech-icon-container h-14 w-14 rounded-full bg-gradient-to-br from-purple-400/20 to-purple-600/20 flex items-center justify-center mb-4">
-                      <Cpu size={28} className="text-purple-500" />
+                  {/* Produtos Inovadores - Redesenhado */}
+                  <div className="flex flex-col hover-lift hover-glow transition-all duration-300 p-6 bg-gradient-to-br from-troiton-purple/5 to-troiton-purple/10 rounded-xl border border-troiton-purple/10">
+                    <div className="flex items-center mb-4">
+                      <div className="tech-icon-container h-14 w-14 rounded-xl bg-gradient-to-br from-purple-400/20 to-purple-600/20 flex items-center justify-center mr-4">
+                        <Cpu size={28} className="text-purple-500" />
+                      </div>
+                      <h3 className="text-xl font-semibold">Produtos Inovadores</h3>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Produtos Inovadores</h3>
-                    <p className="text-center text-sm text-muted-foreground">Dispositivos e equipamentos de última geração com tecnologia avançada e performance superior</p>
-                  </div>
-
-                  <div className="flex flex-col items-center hover-lift hover-glow transition-all duration-300">
-                    <div className="tech-icon-container h-14 w-14 rounded-full bg-gradient-to-br from-green-400/20 to-teal-600/20 flex items-center justify-center mb-4">
-                      <Globe size={28} className="text-teal-500" />
+                    
+                    <p className="text-muted-foreground mb-6">Dispositivos e equipamentos de última geração com tecnologia avançada e performance superior</p>
+                    
+                    <div className="grid grid-cols-2 gap-3 mb-6">
+                      <div className="flex items-center">
+                        <Cpu size={18} className="text-purple-500 mr-2" />
+                        <span className="text-sm">Smartphones</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Monitor size={18} className="text-purple-500 mr-2" />
+                        <span className="text-sm">Notebooks</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Database size={18} className="text-purple-500 mr-2" />
+                        <span className="text-sm">Armazenamento</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Shield size={18} className="text-purple-500 mr-2" />
+                        <span className="text-sm">Acessórios</span>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2">Consultoria Digital</h3>
-                    <p className="text-center text-sm text-muted-foreground">Estratégias de transformação digital e soluções integradas para impulsionar seu crescimento</p>
+                    
+                    <Link to="/produtos" className="group inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue mt-auto">
+                      Descobrir produtos <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+                    </Link>
                   </div>
                 </div>
                 
