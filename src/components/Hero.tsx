@@ -1,7 +1,8 @@
 
 import React from "react";
 import { FadeIn } from "./animations/FadeIn";
-import { ArrowRight, Cpu, Zap, Shield } from "lucide-react";
+import { ArrowRight, Cpu, Zap, Shield, Server, Globe, Database } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function Hero() {
   return (
@@ -22,38 +23,41 @@ export function Hero() {
         <div className="flex flex-col items-center justify-center text-center">
           <FadeIn>
             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-sm font-medium bg-gradient-to-r from-troiton-blue/10 to-troiton-purple/10 rounded-full">
-              <Cpu size={16} className="text-troiton-purple" />
+              <Server size={16} className="text-troiton-purple" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
-                Tecnologia a um clique de distância
+                Inovação e Tecnologia de Ponta
               </span>
-              <Cpu size={16} className="text-troiton-blue" />
+              <Database size={16} className="text-troiton-blue" />
             </div>
           </FadeIn>
 
           <FadeIn delay={200}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight md:leading-tight lg:leading-tight max-w-5xl">
-              Conectando Pessoas com{" "}
+              Transformando o Futuro com{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple animate-pulse">
-                Tecnologia
+                Tecnologia Inovadora
               </span>
             </h1>
+            <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+              Soluções digitais que impulsionam negócios e conectam pessoas através da tecnologia avançada e intuitiva
+            </p>
           </FadeIn>
 
           <FadeIn delay={400}>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <a 
-                href="#solutions" 
+              <Link 
+                to="#solutions" 
                 className="bg-gradient-to-r from-troiton-blue to-troiton-purple hover:from-troiton-lightblue hover:to-troiton-lightpurple text-white font-medium px-8 py-3.5 rounded-lg transition-all duration-300 button-effect"
               >
                 Explorar Soluções
-              </a>
-              <a 
-                href="/produtos" 
+              </Link>
+              <Link 
+                to="/produtos" 
                 className="group flex items-center justify-center gap-2 bg-troiton-gray hover:bg-troiton-gray/80 px-8 py-3.5 rounded-lg transition-all duration-300"
               >
                 Ver Produtos
                 <ArrowRight size={18} className="text-troiton-purple transition-transform group-hover:translate-x-1" />
-              </a>
+              </Link>
             </div>
           </FadeIn>
 
@@ -70,27 +74,30 @@ export function Hero() {
                     <div className="tech-icon-container h-16 w-16 rounded-full bg-gradient-to-br from-blue-400/20 to-blue-600/20 flex items-center justify-center mb-4">
                       <Zap size={30} className="text-blue-500" />
                     </div>
-                    <h3 className="text-xl font-semibold">Soluções Empresariais</h3>
+                    <h3 className="text-xl font-semibold mb-2">Soluções Empresariais</h3>
+                    <p className="text-center text-sm text-muted-foreground">Infraestrutura, cloud computing e soluções personalizadas para negócios</p>
                   </div>
 
                   <div className="flex flex-col items-center hover-lift hover-glow">
                     <div className="tech-icon-container h-16 w-16 rounded-full bg-gradient-to-br from-purple-400/20 to-purple-600/20 flex items-center justify-center mb-4">
                       <Cpu size={30} className="text-purple-500" />
                     </div>
-                    <h3 className="text-xl font-semibold">Produtos para Consumidores</h3>
+                    <h3 className="text-xl font-semibold mb-2">Produtos Tecnológicos</h3>
+                    <p className="text-center text-sm text-muted-foreground">Dispositivos e equipamentos de última geração para consumidores</p>
                   </div>
 
                   <div className="flex flex-col items-center hover-lift hover-glow">
                     <div className="tech-icon-container h-16 w-16 rounded-full bg-gradient-to-br from-green-400/20 to-teal-600/20 flex items-center justify-center mb-4">
-                      <Shield size={30} className="text-teal-500" />
+                      <Globe size={30} className="text-teal-500" />
                     </div>
-                    <h3 className="text-xl font-semibold">Jogos Digitais</h3>
+                    <h3 className="text-xl font-semibold mb-2">Consultoria Digital</h3>
+                    <p className="text-center text-sm text-muted-foreground">Estratégias personalizadas e transformação digital para seu negócio</p>
                   </div>
                 </div>
                 
                 <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-gray-200 to-transparent my-10"></div>
                 
-                <div className="flex justify-center items-center gap-10 md:gap-16">
+                <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-troiton-blue to-troiton-purple">8+</div>
                     <div className="text-sm text-gray-500">Anos de Experiência</div>
@@ -107,7 +114,14 @@ export function Hero() {
                   
                   <div className="text-center hidden md:block">
                     <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-troiton-blue to-troiton-purple">50+</div>
-                    <div className="text-sm text-gray-500">Parceiros</div>
+                    <div className="text-sm text-gray-500">Parceiros Tecnológicos</div>
+                  </div>
+                  
+                  <div className="h-10 w-px bg-gray-200 hidden lg:block"></div>
+                  
+                  <div className="text-center hidden lg:block">
+                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-troiton-blue to-troiton-purple">100+</div>
+                    <div className="text-sm text-gray-500">Projetos Inovadores</div>
                   </div>
                 </div>
               </div>

@@ -8,11 +8,11 @@ import { Solutions } from "@/components/Solutions";
 import { Clients } from "@/components/Clients";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { Cpu, Zap, Globe, ShieldCheck } from "lucide-react";
+import { Server, Code, Globe, ShieldCheck } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Troiton Connect+ | Sua Ponte para a Tecnologia";
+    document.title = "Troiton Connect+ | Transformando o Futuro com Tecnologia";
   }, []);
 
   return (
@@ -30,14 +30,14 @@ const Index = () => {
           <div className="troiton-container">
             <FadeIn>
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Cpu className="text-troiton-purple h-6 w-6 animate-pulse" />
+                <Server className="text-troiton-purple h-6 w-6 animate-pulse" />
                 <h2 className="section-title text-center text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
-                  Nossos Segmentos
+                  Segmentos de Atuação
                 </h2>
-                <Cpu className="text-troiton-blue h-6 w-6 animate-pulse" />
+                <Server className="text-troiton-blue h-6 w-6 animate-pulse" />
               </div>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
-                Soluções tecnológicas para todos os tipos de necessidades
+                Tecnologia especializada para cada setor do mercado
               </p>
             </FadeIn>
             
@@ -54,14 +54,14 @@ const Index = () => {
           <div className="troiton-container relative z-10">
             <FadeIn>
               <div className="flex items-center justify-center gap-2 mb-2">
-                <Zap className="text-troiton-blue h-6 w-6 animate-pulse" />
+                <Code className="text-troiton-blue h-6 w-6 animate-pulse" />
                 <h2 className="section-title text-center text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
-                  Nossas Soluções
+                  Soluções Inovadoras
                 </h2>
-                <Zap className="text-troiton-purple h-6 w-6 animate-pulse" />
+                <Code className="text-troiton-purple h-6 w-6 animate-pulse" />
               </div>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
-                Impulsionando sua experiência digital com tecnologia de ponta
+                Tecnologias revolucionárias que transformam negócios e experiências digitais
               </p>
             </FadeIn>
             
@@ -82,12 +82,12 @@ const Index = () => {
               <div className="flex items-center justify-center gap-2 mb-2">
                 <Globe className="text-troiton-purple h-6 w-6 animate-pulse" />
                 <h2 className="section-title text-center text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
-                  Sobre Nós
+                  Nossa Trajetória
                 </h2>
                 <Globe className="text-troiton-blue h-6 w-6 animate-pulse" />
               </div>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
-                Conheça nossa história e missão de conectar pessoas através da tecnologia
+                Conheça nossa história de inovação e compromisso com a excelência tecnológica
               </p>
             </FadeIn>
             
@@ -109,12 +109,12 @@ const Index = () => {
               <div className="flex items-center justify-center gap-2 mb-2">
                 <ShieldCheck className="text-troiton-blue h-6 w-6 animate-pulse" />
                 <h2 className="section-title text-center text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple">
-                  Nossos Clientes
+                  Empresas que Confiam em Nós
                 </h2>
                 <ShieldCheck className="text-troiton-purple h-6 w-6 animate-pulse" />
               </div>
               <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-8">
-                Empresas que confiam em nossas soluções tecnológicas
+                Parceiros de negócios que transformaram suas operações com nossas soluções
               </p>
             </FadeIn>
             
