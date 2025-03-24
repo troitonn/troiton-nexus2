@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -107,8 +108,8 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "py-2 bg-white/95 backdrop-blur-lg shadow-md" 
-          : "py-4 bg-transparent"
+          ? "py-1 bg-white/95 backdrop-blur-lg shadow-md" 
+          : "py-2 bg-transparent"
       )}
     >
       <div className="troiton-container">
@@ -120,7 +121,7 @@ export function Header() {
             <img 
               src="/troiton-logo.png" 
               alt="Troiton Business+" 
-              className="h-10 md:h-12 transition-all duration-300 group-hover:scale-105"
+              className="h-8 md:h-10 transition-all duration-300 group-hover:scale-105"
             />
           </Link>
 
@@ -201,10 +202,10 @@ export function Header() {
           isOpen ? "translate-y-0" : "-translate-y-full"
         )}
       >
-        <div className="p-6 space-y-2">
+        <div className="p-4 space-y-1">
           {navLinks.map((link) => (
             link.children ? (
-              <div key={link.name} className="py-2">
+              <div key={link.name} className="py-1.5">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center justify-between w-full text-base font-medium text-troiton-dark hover:text-troiton-purple">
                     <span className="flex items-center gap-2">
@@ -233,7 +234,7 @@ export function Header() {
               <Link
                 key={link.name}
                 to={link.href}
-                className="block py-2 text-base font-medium text-troiton-dark hover:text-troiton-purple flex items-center gap-2"
+                className="block py-1.5 text-base font-medium text-troiton-dark hover:text-troiton-purple flex items-center gap-2"
                 onClick={() => setIsOpen(false)}
               >
                 {link.icon}
