@@ -119,7 +119,7 @@ export function Header() {
           >
             <img 
               src="/troiton-logo.png" 
-              alt="Troiton Connect+" 
+              alt="Troiton Business+" 
               className="h-10 md:h-12 transition-all duration-300 group-hover:scale-105"
             />
           </Link>
@@ -207,7 +207,7 @@ export function Header() {
               <div key={link.name} className="py-2">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center justify-between w-full text-base font-medium text-troiton-dark hover:text-troiton-purple">
-                    <span className="flex items-center">
+                    <span className="flex items-center gap-2">
                       {link.icon}
                       {link.name}
                     </span>
@@ -233,7 +233,7 @@ export function Header() {
               <Link
                 key={link.name}
                 to={link.href}
-                className="block py-2 text-base font-medium text-troiton-dark hover:text-troiton-purple flex items-center"
+                className="block py-2 text-base font-medium text-troiton-dark hover:text-troiton-purple flex items-center gap-2"
                 onClick={() => setIsOpen(false)}
               >
                 {link.icon}
@@ -241,14 +241,6 @@ export function Header() {
               </Link>
             )
           ))}
-          <Link
-            to="/contato"
-            className="block w-full bg-gradient-to-r from-troiton-blue to-troiton-purple text-white font-medium px-6 py-3 rounded-lg text-center mt-6 flex items-center justify-center gap-2 shadow-md"
-            onClick={() => setIsOpen(false)}
-          >
-            <Star className="h-4 w-4" />
-            Começar Agora
-          </Link>
         </div>
       </div>
     </header>
