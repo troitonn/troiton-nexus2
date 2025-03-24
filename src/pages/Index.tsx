@@ -12,7 +12,7 @@ import { Server, Code, ShieldCheck, Cpu } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Troiton Connect+ | Transformando o Futuro com Tecnologia";
+    document.title = "Troiton Business+ | Transformando o Futuro com Tecnologia";
   }, []);
 
   return (

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Cpu, Zap, Star, Users, Server } from "lucide-react";
@@ -10,13 +9,12 @@ export function Footer() {
       <div className="troiton-container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10">
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4 group">
-              <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-troiton-blue to-troiton-purple flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105">
-                <span className="text-white font-bold text-xl">T</span>
-              </div>
-              <span className="font-bold text-xl tracking-tight text-white">
-                Troiton<span className="text-troiton-purple">Connect+</span>
-              </span>
+            <Link to="/" className="flex items-center mb-4 group">
+              <img 
+                src="/troiton-logo.png" 
+                alt="Troiton Connect+" 
+                className="h-10 transition-all duration-300 group-hover:scale-105 brightness-0 invert"
+              />
             </Link>
             <p className="text-gray-400 text-sm mb-6">
               Conectando empresas e consumidores às melhores soluções tecnológicas do mercado.
@@ -204,7 +202,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Troiton Connect+. Todos os direitos reservados.
+            © {new Date().getFullYear()} Troiton Business+. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6">
             <Link to="/contato#terms" className="text-gray-500 hover:text-white text-sm transition-colors duration-200">

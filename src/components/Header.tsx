@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -116,14 +115,13 @@ export function Header() {
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="flex items-center gap-2 group"
+            className="flex items-center group"
           >
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-troiton-blue to-troiton-purple flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105">
-              <span className="text-white font-bold text-xl">T</span>
-            </div>
-            <span className="font-bold text-xl tracking-tight text-troiton-dark">
-              Troiton<span className="text-troiton-purple">Connect+</span>
-            </span>
+            <img 
+              src="/troiton-logo.png" 
+              alt="Troiton Connect+" 
+              className="h-10 md:h-12 transition-all duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {!isMobile && (
