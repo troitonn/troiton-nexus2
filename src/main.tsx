@@ -14,8 +14,8 @@ try {
   if (rootElement) {
     rootElement.innerHTML = `
       <div style="color: red; padding: 20px; font-family: sans-serif;">
-        <h2>Erro ao carregar a aplicação</h2>
-        <p>${error instanceof Error ? error.message : 'Erro desconhecido'}</p>
+        <h2>Error loading application</h2>
+        <p>${error instanceof Error ? error.message : 'Unknown error'}</p>
       </div>
     `;
   }
