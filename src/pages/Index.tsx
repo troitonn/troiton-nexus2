@@ -18,10 +18,10 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-white via-gray-50 to-white">
       <Header />
-      <main className="flex-grow pt-10 md:pt-12">
+      <main className="flex-grow">
         <Hero />
         
-        <section id="business-segments" className="py-16 md:py-24 relative overflow-hidden">
+        <section id="business-segments" className="py-12 md:py-16 relative overflow-hidden">
           {/* Modern tech pattern background */}
           <div className="absolute inset-0 tech-pattern-dots opacity-5"></div>
           <div className="absolute top-10 left-10 w-48 h-48 bg-blue-500/5 rounded-full blur-3xl"></div>
@@ -47,7 +47,7 @@ const Index = () => {
           </div>
         </section>
         
-        <section id="solutions" className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <section id="solutions" className="py-12 md:py-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
           {/* Modern tech grid pattern */}
           <div className="absolute inset-0 tech-pattern-grid opacity-5"></div>
           <div className="absolute top-1/4 right-1/4 w-56 h-56 bg-troiton-blue/5 rounded-full blur-3xl"></div>
@@ -73,7 +73,7 @@ const Index = () => {
           </div>
         </section>
         
-        <section id="about-us" className="py-16 md:py-24 relative overflow-hidden">
+        <section id="about-us" className="py-12 md:py-16 relative overflow-hidden">
           {/* Modern tech-inspired background elements */}
           <div className="absolute inset-0 tech-pattern-dots opacity-5"></div>
           <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-blue-400/5 to-purple-400/5 rounded-full blur-3xl"></div>
@@ -99,7 +99,7 @@ const Index = () => {
           </div>
         </section>
         
-        <section id="clients" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+        <section id="clients" className="py-12 md:py-16 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
           {/* Modern tech-inspired background elements */}
           <div className="absolute inset-0 tech-pattern-grid opacity-5"></div>
           <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-troiton-blue/5 rounded-full blur-3xl"></div>
