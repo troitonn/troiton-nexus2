@@ -8,7 +8,6 @@ import { Solutions } from "@/components/Solutions";
 import { Clients } from "@/components/Clients";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { Server, Code, ShieldCheck, Cpu } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
