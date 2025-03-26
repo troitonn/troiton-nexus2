@@ -9,7 +9,7 @@ export function Hero() {
         <div className="absolute top-0 left-0 w-full h-full tech-pattern-grid opacity-10"></div>
         <div className="absolute top-0 right-0 w-full h-full circuit-pattern opacity-5"></div>
         <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-troiton-purple/10 blur-3xl"></div>
-        <div className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-troiton-blue/10 blur-3xl"></div>
+        
         <div className="absolute top-1/3 left-1/4 w-64 h-64 rounded-full bg-blue-500/5 blur-3xl floating-element"></div>
         <div className="absolute bottom-1/4 right-1/3 w-48 h-48 rounded-full bg-purple-500/5 blur-3xl floating-element" style={{
         animationDelay: "2s"

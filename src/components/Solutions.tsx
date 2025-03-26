@@ -84,7 +84,7 @@ export function Solutions() {
                       <div className="w-10 h-10 bg-troiton-purple/10 rounded-lg flex items-center justify-center mb-4">
                         <Server size={20} className="text-troiton-purple" />
                       </div>
-                      <h4 className="text-lg font-semibold mb-2">Servidores e Storage</h4>
+                      <h4 className="text-lg font-semibold mb-2">Soluções</h4>
                       <p className="text-sm text-muted-foreground">Oferecemos soluções  corporativa projetadas para otimizar os processos empresariais.</p>
                     </div>
                     
