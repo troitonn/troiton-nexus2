@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -108,22 +107,21 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "py-2 bg-white/95 backdrop-blur-lg shadow-md" 
-          : "py-4 bg-transparent"
+          ? "py-1 bg-white/95 backdrop-blur-lg shadow-md" 
+          : "py-2 bg-transparent"
       )}
     >
       <div className="troiton-container">
         <div className="flex items-center justify-between">
           <Link 
             to="/" 
-            className="flex items-center gap-2 group"
+            className="flex items-center group"
           >
-            <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-troiton-blue to-troiton-purple flex items-center justify-center shadow-md transition-transform duration-300 group-hover:scale-105">
-              <span className="text-white font-bold text-xl">T</span>
-            </div>
-            <span className="font-bold text-xl tracking-tight text-troiton-dark">
-              Troiton<span className="text-troiton-purple">Connect+</span>
-            </span>
+            <img 
+              src="/troiton-logo-new.png" 
+              alt="Troiton Business+" 
+              className="h-12 md:h-16 transition-all duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {!isMobile && (
@@ -196,20 +194,19 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={cn(
           "md:hidden fixed inset-x-0 bg-white/95 backdrop-blur-lg shadow-lg transition-transform duration-300 ease-in-out z-40",
           isOpen ? "translate-y-0" : "-translate-y-full"
         )}
       >
-        <div className="p-6 space-y-2">
+        <div className="p-4 space-y-1">
           {navLinks.map((link) => (
             link.children ? (
-              <div key={link.name} className="py-2">
+              <div key={link.name} className="py-1.5">
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center justify-between w-full text-base font-medium text-troiton-dark hover:text-troiton-purple">
-                    <span className="flex items-center">
+                    <span className="flex items-center gap-2">
                       {link.icon}
                       {link.name}
                     </span>
@@ -235,7 +232,7 @@ export function Header() {
               <Link
                 key={link.name}
                 to={link.href}
-                className="block py-2 text-base font-medium text-troiton-dark hover:text-troiton-purple flex items-center"
+                className="block py-1.5 text-base font-medium text-troiton-dark hover:text-troiton-purple flex items-center gap-2"
                 onClick={() => setIsOpen(false)}
               >
                 {link.icon}
@@ -243,14 +240,6 @@ export function Header() {
               </Link>
             )
           ))}
-          <Link
-            to="/contato"
-            className="block w-full bg-gradient-to-r from-troiton-blue to-troiton-purple text-white font-medium px-6 py-3 rounded-lg text-center mt-6 flex items-center justify-center gap-2 shadow-md"
-            onClick={() => setIsOpen(false)}
-          >
-            <Star className="h-4 w-4" />
-            Começar Agora
-          </Link>
         </div>
       </div>
     </header>
