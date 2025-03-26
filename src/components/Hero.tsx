@@ -1,15 +1,9 @@
-
 import React from "react";
 import { FadeIn } from "./animations/FadeIn";
 import { ArrowRight, Cpu, Server, Monitor, Printer, PlugZap, Shield, Database } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export function Hero() {
-  return (
-    <section 
-      id="home" 
-      className="relative pt-32 pb-16 md:pt-40 md:pb-32 overflow-hidden"
-    >
+  return <section id="home" className="relative pt-32 pb-16 md:pt-40 md:pb-32 overflow-hidden">
       {/* Enhanced technology-inspired background elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full tech-pattern-grid opacity-10"></div>
@@ -17,7 +11,9 @@ export function Hero() {
         <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-troiton-purple/10 blur-3xl"></div>
         <div className="absolute -bottom-20 -left-20 w-96 h-96 rounded-full bg-troiton-blue/10 blur-3xl"></div>
         <div className="absolute top-1/3 left-1/4 w-64 h-64 rounded-full bg-blue-500/5 blur-3xl floating-element"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 rounded-full bg-purple-500/5 blur-3xl floating-element" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute bottom-1/4 right-1/3 w-48 h-48 rounded-full bg-purple-500/5 blur-3xl floating-element" style={{
+        animationDelay: "2s"
+      }}></div>
       </div>
 
       <div className="troiton-container relative z-10">
@@ -45,17 +41,11 @@ export function Hero() {
 
           <FadeIn delay={400}>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6">
-              <Link 
-                to="#solutions" 
-                className="tech-btn group"
-              >
+              <Link to="#solutions" className="tech-btn group">
                 Explorar Soluções
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link 
-                to="/produtos" 
-                className="group flex items-center justify-center gap-2 bg-white bg-opacity-50 backdrop-blur-sm border border-gray-200 hover:bg-gray-50 hover:border-gray-300 px-8 py-3.5 rounded-lg transition-all duration-300 shadow-sm hover:shadow"
-              >
+              <Link to="/produtos" className="group flex items-center justify-center gap-2 bg-white bg-opacity-50 backdrop-blur-sm border border-gray-200 hover:bg-gray-50 hover:border-gray-300 px-8 py-3.5 rounded-lg transition-all duration-300 shadow-sm hover:shadow">
                 Ver Produtos
                 <ArrowRight size={18} className="text-troiton-purple transition-transform group-hover:translate-x-1" />
               </Link>
@@ -144,38 +134,11 @@ export function Hero() {
                 
                 <div className="tech-divider my-10"></div>
                 
-                <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-troiton-blue to-troiton-purple">10+</div>
-                    <div className="text-sm text-gray-500">Anos no Mercado</div>
-                  </div>
-                  
-                  <div className="h-10 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent"></div>
-                  
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-troiton-blue to-troiton-purple">8.500+</div>
-                    <div className="text-sm text-gray-500">Clientes Atendidos</div>
-                  </div>
-                  
-                  <div className="h-10 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent hidden md:block"></div>
-                  
-                  <div className="text-center hidden md:block">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-troiton-blue to-troiton-purple">65+</div>
-                    <div className="text-sm text-gray-500">Parceiros Tecnológicos</div>
-                  </div>
-                  
-                  <div className="h-10 w-px bg-gradient-to-b from-transparent via-gray-200 to-transparent hidden lg:block"></div>
-                  
-                  <div className="text-center hidden lg:block">
-                    <div className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-troiton-blue to-troiton-purple">250+</div>
-                    <div className="text-sm text-gray-500">Projetos Entregues</div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </FadeIn>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }

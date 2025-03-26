@@ -1,18 +1,9 @@
-
 import React from "react";
 import { FadeIn } from "./animations/FadeIn";
 import { Building2, Users, BarChart3, Star, Award, Heart, Trophy, Medal, TrendingUp } from "lucide-react";
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem, 
-  CarouselNext, 
-  CarouselPrevious
-} from "@/components/ui/carousel";
-
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 export function AboutUs() {
-  return (
-    <div className="w-full">
+  return <div className="w-full">
       <Carousel className="w-full mb-12">
         <CarouselContent>
           <CarouselItem>
@@ -22,9 +13,7 @@ export function AboutUs() {
                 <Building2 size={30} className="text-white" />
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Nossa História</h3>
-              <p className="text-center text-sm">
-                Fundada em 2015, nascemos para transformar o acesso à tecnologia no Brasil, conectando pessoas e empresas às melhores soluções tecnológicas.
-              </p>
+              <p className="text-center text-sm">Somos uma empresa dedicada a transformar o acesso à tecnologia no Brasil, conectando empresas e consumidores finais às melhores soluções em equipamentos, como periféricos, teclados, mouses, notebooks e muito mais.</p>
             </div>
           </CarouselItem>
 
@@ -89,47 +78,14 @@ export function AboutUs() {
       {/* Números da empresa em cards que brilham */}
       <FadeIn delay={400}>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          <div className="glass-card overflow-hidden relative p-3 group hover:shadow-md hover:shadow-blue-400/20 transition-all duration-300">
-            <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-blue-500/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="flex flex-col items-center">
-                <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-blue-500 group-hover:scale-110 transition-transform duration-300">8+</span>
-                <span className="text-xs text-gray-500 mt-1">Anos de experiência</span>
-              </div>
-            </div>
-          </div>
           
-          <div className="glass-card overflow-hidden relative p-3 group hover:shadow-md hover:shadow-purple-400/20 transition-all duration-300">
-            <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-purple-500/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="flex flex-col items-center">
-                <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-troiton-purple to-purple-500 group-hover:scale-110 transition-transform duration-300">5000+</span>
-                <span className="text-xs text-gray-500 mt-1">Clientes satisfeitos</span>
-              </div>
-            </div>
-          </div>
           
-          <div className="glass-card overflow-hidden relative p-3 group hover:shadow-md hover:shadow-teal-400/20 transition-all duration-300">
-            <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-teal-500/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="flex flex-col items-center">
-                <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-600 group-hover:scale-110 transition-transform duration-300">50+</span>
-                <span className="text-xs text-gray-500 mt-1">Parceiros tecnológicos</span>
-              </div>
-            </div>
-          </div>
           
-          <div className="glass-card overflow-hidden relative p-3 group hover:shadow-md hover:shadow-amber-400/20 transition-all duration-300">
-            <div className="absolute -right-4 -bottom-4 w-16 h-16 bg-amber-500/10 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <div className="relative">
-              <div className="flex flex-col items-center">
-                <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600 group-hover:scale-110 transition-transform duration-300">3</span>
-                <span className="text-xs text-gray-500 mt-1">Regiões atendidas</span>
-              </div>
-            </div>
-          </div>
+          
+          
+          
+          
         </div>
       </FadeIn>
-    </div>
-  );
+    </div>;
 }

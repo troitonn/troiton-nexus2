@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -9,14 +8,11 @@ import { Clients } from "@/components/Clients";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Server, Code, ShieldCheck, Cpu } from "lucide-react";
-
 const Index = () => {
   useEffect(() => {
     document.title = "Troiton Business+ | Transformando o Futuro com Tecnologia";
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-white via-gray-50 to-white">
+  return <div className="min-h-screen flex flex-col bg-gradient-to-b from-white via-gray-50 to-white">
       <Header />
       <main className="flex-grow pt-10 md:pt-12">
         <Hero />
@@ -101,22 +97,18 @@ const Index = () => {
         
         <section id="clients" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
           {/* Modern tech-inspired background elements */}
-          <div className="absolute inset-0 tech-pattern-grid opacity-5"></div>
+          
           <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-troiton-blue/5 rounded-full blur-3xl"></div>
           <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-troiton-purple/5 rounded-full blur-3xl"></div>
           
           <div className="troiton-container relative z-10">
             <FadeIn>
               <div className="flex items-center justify-center gap-2 mb-4">
-                <div className="h-0.5 w-5 md:w-10 bg-gradient-to-r from-troiton-blue to-troiton-purple"></div>
-                <h2 className="section-title text-center text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple text-xl md:text-2xl lg:text-3xl">
-                  Empresas que Confiam em Nós
-                </h2>
-                <div className="h-0.5 w-5 md:w-10 bg-gradient-to-r from-troiton-purple to-troiton-blue"></div>
+                
+                
+                
               </div>
-              <p className="text-center text-muted-foreground text-sm md:text-base max-w-2xl mx-auto mb-8 md:mb-12 px-4">
-                Parceiros de negócios que transformaram suas operações com nossas soluções
-              </p>
+              
             </FadeIn>
             
             <div className="mt-8 md:mt-12">
@@ -126,8 +118,6 @@ const Index = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
