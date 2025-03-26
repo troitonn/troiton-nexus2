@@ -1,18 +1,10 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { FadeIn } from "./animations/FadeIn";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { 
-  Building, Server, Laptop, ShoppingCart, 
-  Smartphone, Headphones, Gamepad, ArrowRight,
-  Printer, MonitorSmartphone, CloudCog, Network,
-  Database, ChevronRight
-} from "lucide-react";
-
+import { Building, Server, Laptop, ShoppingCart, Smartphone, Headphones, Gamepad, ArrowRight, Printer, MonitorSmartphone, CloudCog, Network, Database, ChevronRight } from "lucide-react";
 export function Solutions() {
-  return (
-    <section id="solutions-detail" className="py-20 md:py-32 bg-gradient-to-b from-white to-troiton-gray/20">
+  return <section id="solutions-detail" className="py-20 md:py-32 bg-gradient-to-b from-white to-troiton-gray/20">
       <div className="troiton-container">
         <div className="text-center mb-16">
           <FadeIn>
@@ -55,9 +47,7 @@ export function Solutions() {
                       </div>
                       <div className="ml-3">
                         <h4 className="text-base font-medium">Equipe Especializada B2B</h4>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          Consultoria técnica e suporte dedicado para ambientes corporativos.
-                        </p>
+                        <p className="text-sm text-muted-foreground mt-1">Suporte dedicado para ambientes corporativos.</p>
                       </div>
                     </div>
                     <div className="flex items-start">
@@ -65,23 +55,11 @@ export function Solutions() {
                         <ChevronRight size={14} className="text-troiton-blue" />
                       </div>
                       <div className="ml-3">
-                        <h4 className="text-base font-medium">Garantia Estendida</h4>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          Cobertura ampliada e suporte prioritário para equipamentos corporativos.
-                        </p>
+                        <h4 className="text-base font-medium">Soluções Tecnológicas para Empresas</h4>
+                        <p className="text-sm text-muted-foreground mt-1">Equipamentos voltados para melhorar a produtividade e a eficiência de empresas de diferentes portes.</p>
                       </div>
                     </div>
-                    <div className="flex items-start">
-                      <div className="flex-shrink-0 h-6 w-6 rounded-full bg-troiton-blue/10 flex items-center justify-center mt-0.5">
-                        <ChevronRight size={14} className="text-troiton-blue" />
-                      </div>
-                      <div className="ml-3">
-                        <h4 className="text-base font-medium">Logística Especializada</h4>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          Entregas programadas e instalação profissional no seu ambiente de trabalho.
-                        </p>
-                      </div>
-                    </div>
+                    
                   </div>
                   
                   <Link to="/contato" className="inline-flex items-center gap-2 bg-troiton-blue hover:bg-troiton-blue/90 text-white font-medium px-6 py-3 rounded-lg mt-8 transition-all duration-300 hover:shadow-lg">
@@ -107,9 +85,7 @@ export function Solutions() {
                         <Server size={20} className="text-troiton-purple" />
                       </div>
                       <h4 className="text-lg font-semibold mb-2">Servidores e Storage</h4>
-                      <p className="text-sm text-muted-foreground">
-                        Infraestrutura robusta para armazenamento e processamento de dados corporativos.
-                      </p>
+                      <p className="text-sm text-muted-foreground">Oferecemos soluções  corporativa projetadas para otimizar os processos empresariais.</p>
                     </div>
                     
                     <div className="glass-card p-6 border-t-2 border-troiton-purple hover:shadow-md transition-all duration-300">
@@ -284,10 +260,7 @@ export function Solutions() {
                       Descubra como nossos produtos podem tornar sua vida mais conectada, produtiva e divertida.
                     </p>
                   </div>
-                  <Link 
-                    to="/produtos" 
-                    className="bg-gradient-to-r from-troiton-blue to-troiton-purple hover:from-troiton-blue/90 hover:to-troiton-purple/90 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg flex items-center gap-2 whitespace-nowrap"
-                  >
+                  <Link to="/produtos" className="bg-gradient-to-r from-troiton-blue to-troiton-purple hover:from-troiton-blue/90 hover:to-troiton-purple/90 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg flex items-center gap-2 whitespace-nowrap">
                     Ver Catálogo Completo
                     <ArrowRight size={16} />
                   </Link>
@@ -297,6 +270,5 @@ export function Solutions() {
           </Tabs>
         </FadeIn>
       </div>
-    </section>
-  );
+    </section>;
 }
