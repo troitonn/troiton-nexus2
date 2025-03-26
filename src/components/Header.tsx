@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -119,9 +118,9 @@ export function Header() {
             className="flex items-center group"
           >
             <img 
-              src="/troiton-logo.png" 
+              src="/troiton-logo-new.png" 
               alt="Troiton Business+" 
-              className="h-8 md:h-10 transition-all duration-300 group-hover:scale-105"
+              className="h-12 md:h-16 transition-all duration-300 group-hover:scale-105"
             />
           </Link>
 
@@ -195,7 +194,6 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile menu */}
       <div
         className={cn(
           "md:hidden fixed inset-x-0 bg-white/95 backdrop-blur-lg shadow-lg transition-transform duration-300 ease-in-out z-40",
