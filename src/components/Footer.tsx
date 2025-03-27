@@ -1,3 +1,4 @@
+
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Cpu, Zap, Star, Users, Server } from "lucide-react";
@@ -8,7 +9,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center mb-4 group">
-              <img src="/troiton-logo.png" alt="Troiton Connect+" className="h-10 transition-all duration-300 group-hover:scale-105 brightness-0 invert" />
+              <img src="/lovable-uploads/557528b9-4cc0-4997-9328-fefd46ff3798.png" alt="Troiton Business+" className="h-10 transition-all duration-300 group-hover:scale-105 brightness-0 invert" />
             </Link>
             <p className="text-gray-400 text-sm mb-6">
               Conectando empresas e consumidores às melhores soluções tecnológicas do mercado.

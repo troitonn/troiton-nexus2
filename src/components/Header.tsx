@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -81,7 +82,7 @@ export function Header() {
       <div className="troiton-container">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center group">
-            <img src="/troiton-logo-new.png" alt="Troiton Business+" className="h-12 md:h-16 transition-all duration-300 group-hover:scale-105" />
+            <img src="/lovable-uploads/557528b9-4cc0-4997-9328-fefd46ff3798.png" alt="Troiton Business+" className="h-12 md:h-16 transition-all duration-300 group-hover:scale-105" />
           </Link>
 
           {!isMobile && <NavigationMenu className="hidden md:flex">
