@@ -5,6 +5,7 @@ import { Menu, X, ChevronDown, Zap, ShoppingBag, Users, Headphones, Star, Cpu, G
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { useIsMobile } from "@/hooks/use-mobile";
+
 const navLinks = [{
   name: "Início",
   href: "/"
@@ -62,10 +63,12 @@ const navLinks = [{
   href: "/contato",
   icon: <Globe className="h-4 w-4 text-troiton-blue mr-1" />
 }];
+
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const isMobile = useIsMobile();
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
@@ -73,6 +76,7 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return <header className={cn("fixed top-0 left-0 right-0 z-50 transition-all duration-300", isScrolled ? "py-1 bg-white/95 backdrop-blur-lg shadow-md" : "py-2 bg-transparent")}>
       <div className="troiton-container">
         <div className="flex items-center justify-between">
@@ -129,7 +133,57 @@ export function Header() {
       </div>
 
       <div className={cn("md:hidden fixed inset-x-0 bg-white/95 backdrop-blur-lg shadow-lg transition-transform duration-300 ease-in-out z-40", isOpen ? "translate-y-0" : "-translate-y-full")}>
-        
+        <div className="troiton-container py-6">
+          <div className="space-y-1">
+            {navLinks.map((link) => 
+              link.children ? (
+                <div key={link.name} className="mb-4">
+                  <div className="flex items-center px-4 py-2 text-troiton-dark font-medium">
+                    {link.icon}
+                    <span className="ml-2">{link.name}</span>
+                  </div>
+                  <div className="ml-4 pl-4 border-l border-gray-200 mt-2 space-y-2">
+                    {link.children.map((child) => (
+                      <Link 
+                        key={child.name}
+                        to={child.href}
+                        className="flex items-start p-3 hover:bg-gradient-to-r hover:from-troiton-blue/10 hover:to-troiton-purple/10 rounded-md"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <div className="mr-3 mt-0.5">{child.icon}</div>
+                        <div>
+                          <div className="font-medium text-sm">{child.name}</div>
+                          <p className="text-xs text-muted-foreground">{child.description}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="flex items-center px-4 py-3 text-troiton-dark font-medium hover:bg-gradient-to-r hover:from-troiton-blue/10 hover:to-troiton-purple/10 rounded-md"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.icon}
+                  <span className="ml-2">{link.name}</span>
+                </Link>
+              )
+            )}
+            
+            <div className="pt-4 mt-4 border-t border-gray-200">
+              <Link 
+                to="/contato"
+                className="bg-gradient-to-r from-troiton-blue to-troiton-purple text-white font-medium px-6 py-3 rounded-lg flex items-center justify-center gap-2 shadow-md w-full"
+                onClick={() => setIsOpen(false)}
+              >
+                <Star className="h-4 w-4" />
+                Começar Agora
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </header>;
 }
