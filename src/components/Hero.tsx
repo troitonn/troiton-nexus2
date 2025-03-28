@@ -102,7 +102,7 @@ export function Hero() {
                       <div className="tech-icon-container h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-400/20 to-purple-600/20 flex items-center justify-center mr-5">
                         <Cpu size={32} className="text-purple-600" />
                       </div>
-                      <h3 className="text-2xl font-semibold">Produtos Inovadores</h3>
+                      <h3 className="text-2xl font-semibold">Produtos </h3>
                     </div>
                     
                     <p className="text-muted-foreground mb-8">Dispositivos e equipamentos de última geração com tecnologia avançada e performance superior</p>

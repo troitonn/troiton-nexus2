@@ -37,9 +37,7 @@ export function AboutUs() {
                 <TrendingUp size={30} className="text-white" />
               </div>
               <h3 className="text-xl font-bold text-center mb-4">Nosso Crescimento</h3>
-              <p className="text-center text-sm">
-                Em poucos anos, nos tornamos referência em soluções tecnológicas, expandindo nossa presença em todo o Brasil.
-              </p>
+              <p className="text-center text-sm">Em poucos anos, conquistamos a confiança do mercado, oferecendo soluções tecnológicas</p>
             </div>
           </CarouselItem>
         </CarouselContent>

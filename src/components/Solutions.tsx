@@ -200,10 +200,7 @@ export function Solutions() {
                 
                 <div className="order-1 lg:order-2">
                   <h3 className="text-2xl font-bold mb-4 text-troiton-dark">Soluções para Varejo</h3>
-                  <p className="text-muted-foreground mb-6">
-                    Uma seleção premium de produtos tecnológicos para o dia a dia, 
-                    com foco na experiência do usuário e nas últimas tendências do mercado.
-                  </p>
+                  <p className="text-muted-foreground mb-6">Uma seleção produtos tecnológicos para o dia a dia, com foco na experiência do usuário e nas últimas tendências do mercado.</p>
                   <p className="text-muted-foreground mb-6">
                     Nossa linha B2C oferece tecnologia acessível e intuitiva para transformar 
                     sua experiência digital, seja em casa, no trabalho ou em movimento.
@@ -215,10 +212,8 @@ export function Solutions() {
                         <ChevronRight size={14} className="text-troiton-purple" />
                       </div>
                       <div className="ml-3">
-                        <h4 className="text-base font-medium">Garantia de Satisfação</h4>
-                        <p className="text-sm text-muted-foreground mt-1">
-                          30 dias para testar e aprovar seu produto com política de devolução facilitada.
-                        </p>
+                        <h4 className="text-base font-medium">Satisfação</h4>
+                        <p className="text-sm text-muted-foreground mt-1">Satisfação garantida </p>
                       </div>
                     </div>
                     <div className="flex items-start">

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Cpu, Zap, Star, Users, Server } from "lucide-react";
@@ -144,9 +143,7 @@ export function Footer() {
             © {new Date().getFullYear()} Troiton Business+. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6">
-            <Link to="/contato#terms" className="text-gray-500 hover:text-white text-sm transition-colors duration-200">
-              Termos de Serviço
-            </Link>
+            <Link to="/contato#terms" className="text-gray-500 hover:text-white text-sm transition-colors duration-200"></Link>
             <Link to="/contato#privacy" className="text-gray-500 hover:text-white text-sm transition-colors duration-200">
               Política de Privacidade
             </Link>
