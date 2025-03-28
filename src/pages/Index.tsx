@@ -83,27 +83,7 @@ const Index = () => {
           </div>
         </section>
         
-        <section id="clients" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
-          {/* Modern tech-inspired background elements */}
-          
-          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-troiton-blue/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-1/3 w-72 h-72 bg-troiton-purple/5 rounded-full blur-3xl"></div>
-          
-          <div className="troiton-container relative z-10">
-            <FadeIn>
-              <div className="flex items-center justify-center gap-2 mb-4">
-                
-                
-                
-              </div>
-              
-            </FadeIn>
-            
-            <div className="mt-8 md:mt-12">
-              <Clients />
-            </div>
-          </div>
-        </section>
+        
       </main>
       <Footer />
     </div>;
