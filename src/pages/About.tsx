@@ -1,17 +1,13 @@
-
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { CheckCircle, Clock, Building, Users, Award, Target } from "lucide-react";
-
 const About = () => {
   useEffect(() => {
     document.title = "Troiton Business+ | Sobre Nós";
   }, []);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow pt-28 pb-20">
         <section className="py-16">
@@ -24,18 +20,10 @@ const About = () => {
                   </h1>
                 </FadeIn>
                 <FadeIn delay={200}>
-                  <p className="text-lg text-muted-foreground mb-8">
-                    Somos uma empresa brasileira especializada em soluções B2B, dedicada a transformar 
-                    o mercado corporativo através de tecnologia e inovação.
-                  </p>
+                  <p className="text-lg text-muted-foreground mb-8">Somos uma empresa brasileira especializada em soluções B2B e B2C, dedicada a transformar o mercado corporativo através de tecnologia e inovação.</p>
                 </FadeIn>
                 <FadeIn delay={300}>
-                  <p className="text-muted-foreground mb-8">
-                    Fundada com a missão de simplificar e otimizar processos empresariais através da 
-                    implementação de tecnologias disruptivas, a Troiton Business+ se destaca pela 
-                    excelência em serviços e pelo profundo entendimento das necessidades específicas 
-                    de cada setor do mercado.
-                  </p>
+                  <p className="text-muted-foreground mb-8">Com a missão de simplificar e otimizar processos empresariais através da implementação de tecnologias, a Troiton Business+ se destaca pela excelência em serviços e pelo profundo entendimento das necessidades específicas de cada setor do mercado.</p>
                 </FadeIn>
                 <FadeIn delay={400}>
                   <div className="flex flex-col space-y-4 mt-8">
@@ -48,7 +36,7 @@ const About = () => {
                     <div className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-troiton-blue mr-3 flex-shrink-0" />
                       <p className="text-muted-foreground">
-                        <span className="font-medium text-troiton-dark">+500 clientes</span> atendidos em todo Brasil
+                        <span className="font-medium text-troiton-dark">Empresas</span> atendidos em todo Brasil
                       </p>
                     </div>
                     <div className="flex items-start">
@@ -64,11 +52,7 @@ const About = () => {
               <FadeIn direction="left" delay={300}>
                 <div className="relative h-full min-h-[400px] rounded-xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-troiton-blue/20 to-troiton-purple/20 z-10"></div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Equipe Troiton" 
-                    className="w-full h-full object-cover"
-                  />
+                  <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Equipe Troiton" className="w-full h-full object-cover" />
                 </div>
               </FadeIn>
             </div>
@@ -106,9 +90,7 @@ const About = () => {
                       <Award className="h-6 w-6 text-troiton-blue" />
                     </div>
                     <h3 className="text-xl font-semibold mb-4">Excelência</h3>
-                    <p className="text-muted-foreground">
-                      Buscamos a excelência em tudo o que fazemos, desde o desenvolvimento de soluções até o atendimento ao cliente.
-                    </p>
+                    <p className="text-muted-foreground">Buscamos a excelência em tudo o que fazemos, desde o atendimentos de soluções até o atendimento ao cliente.</p>
                   </div>
                 </FadeIn>
                 
@@ -130,9 +112,7 @@ const About = () => {
                       <Target className="h-6 w-6 text-troiton-blue" />
                     </div>
                     <h3 className="text-xl font-semibold mb-4">Inovação</h3>
-                    <p className="text-muted-foreground">
-                      Estamos sempre à frente, explorando novas tecnologias e abordagens para oferecer soluções inovadoras aos nossos clientes.
-                    </p>
+                    <p className="text-muted-foreground">Estamos explorando novas tecnologias e abordagens para oferecer soluções inovadoras aos nossos clientes.</p>
                   </div>
                 </FadeIn>
               </div>
@@ -147,10 +127,7 @@ const About = () => {
                   Entre em contato com nossa equipe para descobrir como as soluções da Troiton Business+ podem 
                   impulsionar sua empresa para o próximo nível.
                 </p>
-                <a 
-                  href="/contato" 
-                  className="inline-block px-8 py-3 bg-white text-troiton-purple font-medium rounded-lg hover:bg-gray-100 transition-colors duration-300"
-                >
+                <a href="/contato" className="inline-block px-8 py-3 bg-white text-troiton-purple font-medium rounded-lg hover:bg-gray-100 transition-colors duration-300">
                   Fale Conosco
                 </a>
               </div>
@@ -159,8 +136,6 @@ const About = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
