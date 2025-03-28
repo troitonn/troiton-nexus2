@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -84,8 +83,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-medium mb-1">Nosso Endereço</h3>
                         <p className="text-muted-foreground">
-                          Av. Paulista, 1000 - Bela Vista<br />
-                          São Paulo - SP, 01310-100
+                          Rua Werner Von Siemens, 111 - Lapa de Baixo<br />
+                          São Paulo - SP, Brasil
                         </p>
                       </div>
                     </div>
@@ -99,8 +98,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-medium mb-1">Telefone</h3>
                         <p className="text-muted-foreground">
-                          +55 (11) 3000-0000<br />
-                          +55 (11) 9 9000-0000
+                          +55 (11) 95823-1139
                         </p>
                       </div>
                     </div>
@@ -114,8 +112,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-medium mb-1">E-mail</h3>
                         <p className="text-muted-foreground">
-                          contato@troitonconnect.com<br />
-                          suporte@troitonconnect.com
+                          connect@troiton.com.br
                         </p>
                       </div>
                     </div>

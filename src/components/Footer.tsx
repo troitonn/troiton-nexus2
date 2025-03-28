@@ -1,3 +1,4 @@
+
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin, Cpu, Zap, Star, Users, Server } from "lucide-react";
@@ -5,7 +6,7 @@ import { Link } from "react-router-dom";
 export function Footer() {
   return <footer id="contact" className="bg-gradient-to-br from-troiton-dark to-troiton-dark/95 text-white pt-16 pb-8">
       <div className="troiton-container">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center mb-4 group">
               <img src="/lovable-uploads/557528b9-4cc0-4997-9328-fefd46ff3798.png" alt="Troiton Business+" className="h-10 transition-all duration-300 group-hover:scale-105 brightness-0 invert" />
@@ -31,51 +32,12 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
-              <Zap size={18} className="text-troiton-purple" />
-              Soluções
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <Link to="/produtos#business" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
-                  <span className="text-xs">→</span> 
-                  Soluções Empresariais
-                </Link>
-              </li>
-              <li>
-                <Link to="/produtos#consumer" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
-                  <span className="text-xs">→</span> 
-                  Produtos para Consumidores
-                </Link>
-              </li>
-              <li>
-                <Link to="/produtos#games" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
-                  <span className="text-xs">→</span> 
-                  Games e Entretenimento
-                </Link>
-              </li>
-              <li>
-                <Link to="/produtos#services" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
-                  <span className="text-xs">→</span> 
-                  Serviços Personalizados
-                </Link>
-              </li>
-              <li>
-                <Link to="/produtos#consulting" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
-                  <span className="text-xs">→</span> 
-                  Consultoria Tecnológica
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold text-lg mb-4 flex items-center gap-2">
               <Users size={18} className="text-troiton-blue" />
               Empresa
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/#about-us" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
+                <Link to="/sobre" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
                   <span className="text-xs">→</span> 
                   Sobre Nós
                 </Link>
@@ -93,13 +55,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/contato#blog" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
-                  <span className="text-xs">→</span> 
-                  Blog & Notícias
-                </Link>
-              </li>
-              <li>
-                <Link to="/contato#privacy" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
+                <Link to="/privacidade" className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-1 hover:translate-x-1 transform transition-transform">
                   <span className="text-xs">→</span> 
                   Política de Privacidade
                 </Link>
@@ -119,11 +75,11 @@ export function Footer() {
               </div>
               <div className="flex items-center group hover:scale-105 transition-transform duration-200">
                 <Mail size={18} className="text-troiton-blue mr-3 flex-shrink-0 group-hover:animate-bounce" />
-                <a href="mailto:contato@troitonconnect.com" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">connect@troiton.com.br</a>
+                <a href="mailto:connect@troiton.com.br" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">connect@troiton.com.br</a>
               </div>
               <div className="flex items-center group hover:scale-105 transition-transform duration-200">
                 <Phone size={18} className="text-troiton-purple mr-3 flex-shrink-0 group-hover:animate-bounce" />
-                <a href="tel:+551155555555" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">+55 (11) 95823-1139</a>
+                <a href="tel:+551158231139" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">+55 (11) 95823-1139</a>
               </div>
               
               <form className="mt-6 group">
@@ -143,8 +99,7 @@ export function Footer() {
             © {new Date().getFullYear()} Troiton Business+. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6">
-            <Link to="/contato#terms" className="text-gray-500 hover:text-white text-sm transition-colors duration-200"></Link>
-            <Link to="/contato#privacy" className="text-gray-500 hover:text-white text-sm transition-colors duration-200">
+            <Link to="/privacidade" className="text-gray-500 hover:text-white text-sm transition-colors duration-200">
               Política de Privacidade
             </Link>
             <Link to="/contato#cookies" className="text-gray-500 hover:text-white text-sm transition-colors duration-200">
