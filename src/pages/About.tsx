@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -30,13 +31,13 @@ const About = () => {
                     <div className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-troiton-purple mr-3 flex-shrink-0" />
                       <p className="text-muted-foreground">
-                        <span className="font-medium text-troiton-dark">+10 anos</span> de experiência no mercado B2B
+                        <span className="font-medium text-troiton-dark">Em crescimento constante</span> 
                       </p>
                     </div>
                     <div className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-troiton-blue mr-3 flex-shrink-0" />
                       <p className="text-muted-foreground">
-                        <span className="font-medium text-troiton-dark">Empresas</span> atendidos em todo Brasil
+                        <span className="font-medium text-troiton-dark">Atendendo empresas</span> em diversas regiões do Brasil
                       </p>
                     </div>
                     <div className="flex items-start">
