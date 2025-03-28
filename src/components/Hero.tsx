@@ -30,9 +30,7 @@ export function Hero() {
           <FadeIn delay={200}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight md:leading-tight lg:leading-tight max-w-5xl">
               Transformando o Futuro com{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple shimmer-effect">
-                Tecnologia Inovadora
-              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-troiton-blue to-troiton-purple shimmer-effect">Tecnologia</span>
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Soluções tecnológicas integradas que potencializam negócios e conectam pessoas através de sistemas inteligentes e acessíveis
