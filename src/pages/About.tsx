@@ -1,11 +1,9 @@
-
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { CheckCircle, Clock, Building, Users, Award, Target, Globe, Star, Server, Shield, Cpu, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const About = () => {
   useEffect(() => {
     document.title = "Troiton Business+ | Sobre Nós";
@@ -82,107 +80,9 @@ const About = () => {
             {/* New Section: Troiton B2B Details */}
             <FadeIn delay={600}>
               <div className="mb-20">
-                <h2 className="text-2xl md:text-3xl font-bold mb-8 text-troiton-dark">
-                  Por que escolher a Troiton B2B?
-                </h2>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-                  <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                      <Server className="h-5 w-5 text-troiton-blue" />
-                      Infraestrutura Completa
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      Oferecemos soluções de infraestrutura completas, desde equipamentos até serviços de instalação e manutenção. Nossa abordagem integrada garante que todos os elementos trabalhem juntos sem problemas.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-purple" />
-                        <span className="text-sm text-muted-foreground">Servidores e storage de alta performance</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-purple" />
-                        <span className="text-sm text-muted-foreground">Redes corporativas otimizadas</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-purple" />
-                        <span className="text-sm text-muted-foreground">Soluções de backup e recuperação</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                      <Shield className="h-5 w-5 text-troiton-purple" />
-                      Segurança da Informação
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      Protegemos os dados e sistemas de sua empresa com soluções de segurança robustas e atualizadas, garantindo a continuidade dos negócios e a conformidade com regulamentações.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-blue" />
-                        <span className="text-sm text-muted-foreground">Proteção contra ameaças avançadas</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-blue" />
-                        <span className="text-sm text-muted-foreground">Monitoramento 24/7</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-blue" />
-                        <span className="text-sm text-muted-foreground">Políticas de segurança personalizadas</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                      <Cpu className="h-5 w-5 text-troiton-blue" />
-                      Workplace Moderno
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      Transformamos o ambiente de trabalho com soluções que aumentam a produtividade e facilitam a colaboração entre equipes, independentemente da localização.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-purple" />
-                        <span className="text-sm text-muted-foreground">Equipamentos de última geração</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-purple" />
-                        <span className="text-sm text-muted-foreground">Soluções para trabalho híbrido</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-purple" />
-                        <span className="text-sm text-muted-foreground">Ferramentas de colaboração integradas</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                    <h3 className="text-xl font-semibold mb-4 flex items-center gap-2">
-                      <Globe className="h-5 w-5 text-troiton-purple" />
-                      Transformação Digital
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      Ajudamos empresas a implementar tecnologias digitais que otimizam processos, reduzem custos e criam novas oportunidades de negócios.
-                    </p>
-                    <ul className="space-y-2">
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-blue" />
-                        <span className="text-sm text-muted-foreground">Automação de processos</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-blue" />
-                        <span className="text-sm text-muted-foreground">Soluções em nuvem</span>
-                      </li>
-                      <li className="flex items-center gap-2">
-                        <Star className="h-4 w-4 text-troiton-blue" />
-                        <span className="text-sm text-muted-foreground">Análise de dados e insights</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                
+                
                 
                 <div className="text-center">
                   <Link to="/contato" className="inline-flex items-center gap-2 bg-gradient-to-r from-troiton-blue to-troiton-purple hover:opacity-90 text-white font-medium px-8 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
