@@ -115,10 +115,15 @@ const Index = () => {
                   </div>
                   
                   <div className="mt-8">
-                    <Link to="/sobre" className="inline-flex items-center gap-2 bg-gradient-to-r from-troiton-blue to-troiton-purple hover:opacity-90 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg">
+                    <a 
+                      href="https://www.troiton.com.br" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-troiton-blue to-troiton-purple hover:opacity-90 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg"
+                    >
                       Conheça mais
                       <Server className="h-4 w-4" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </FadeIn>
