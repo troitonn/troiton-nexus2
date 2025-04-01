@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { CheckCircle, Clock, Building, Users, Award, Target, Globe, Star, Server, Shield, Cpu } from "lucide-react";
+import { CheckCircle, Clock, Building, Users, Award, Target, Globe, Star, Server, Shield, Cpu, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const About = () => {
