@@ -43,10 +43,7 @@ export function Hero() {
                 Explorar Soluções
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </Link>
-              <Link to="/produtos" className="group flex items-center justify-center gap-2 bg-white bg-opacity-50 backdrop-blur-sm border border-gray-200 hover:bg-gray-50 hover:border-gray-300 px-8 py-3.5 rounded-lg transition-all duration-300 shadow-sm hover:shadow">
-                Ver Produtos
-                <ArrowRight size={18} className="text-troiton-purple transition-transform group-hover:translate-x-1" />
-              </Link>
+              
             </div>
           </FadeIn>
 
