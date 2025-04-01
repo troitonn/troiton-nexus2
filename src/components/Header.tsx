@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -25,7 +26,7 @@ const navLinks = [{
   }]
 }, {
   name: "Sobre Nós",
-  href: "/#about-us",
+  href: "/sobre",
   icon: <Users className="h-4 w-4 text-troiton-purple mr-1" />
 }, {
   name: "Contato",

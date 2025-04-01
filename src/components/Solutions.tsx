@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { FadeIn } from "./animations/FadeIn";
@@ -256,10 +257,10 @@ export function Solutions() {
                       Descubra como nossos produtos podem tornar sua vida mais conectada, produtiva e divertida.
                     </p>
                   </div>
-                  <a href="https://www.troiton.com.br/" target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-troiton-blue to-troiton-purple hover:from-troiton-blue/90 hover:to-troiton-purple/90 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg flex items-center gap-2 whitespace-nowrap">
+                  <Link to="/contato" className="bg-gradient-to-r from-troiton-blue to-troiton-purple hover:from-troiton-blue/90 hover:to-troiton-purple/90 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 hover:shadow-lg flex items-center gap-2 whitespace-nowrap">
                     Ver Catálogo Completo
                     <ArrowRight size={16} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </TabsContent>
