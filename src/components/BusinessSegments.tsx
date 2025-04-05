@@ -5,6 +5,14 @@ import { FadeIn } from "./animations/FadeIn";
 import { Building, ShoppingCart, Package, Gamepad, ArrowRight, Server, Monitor, Printer, Cpu } from "lucide-react";
 
 export function BusinessSegments() {
+  // Function to handle the scroll to solutions section
+  const scrollToSolutions = () => {
+    const solutionsSection = document.getElementById("solutions-detail");
+    if (solutionsSection) {
+      solutionsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="solutions" className="py-20 md:py-32 bg-troiton-gray/30">
       <div className="troiton-container">
@@ -51,9 +59,12 @@ export function BusinessSegments() {
                   <span className="ml-3 text-sm">Mobiliário e Equipamentos</span>
                 </div>
               </div>
-              <Link to="/contato" className="group inline-flex items-center text-sm font-medium text-troiton-blue hover:text-troiton-purple mt-auto">
-                Saiba mais <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
+              <button 
+                onClick={scrollToSolutions}
+                className="group inline-flex items-center text-sm font-medium text-troiton-blue hover:text-troiton-purple mt-auto"
+              >
+                Explorar Soluções <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </button>
             </div>
           </FadeIn>
 
@@ -86,9 +97,12 @@ export function BusinessSegments() {
                   <span className="ml-3 text-sm">Acessórios & Periféricos</span>
                 </div>
               </div>
-              <Link to="/produtos" className="group inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue mt-auto">
-                Saiba mais <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
+              <button 
+                onClick={scrollToSolutions}
+                className="group inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue mt-auto"
+              >
+                Explorar Soluções <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </button>
             </div>
           </FadeIn>
 
@@ -121,9 +135,12 @@ export function BusinessSegments() {
                   <span className="ml-3 text-sm">Acessórios para Gaming</span>
                 </div>
               </div>
-              <Link to="/produtos" className="group inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue mt-auto">
-                Saiba mais <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
+              <button 
+                onClick={scrollToSolutions}
+                className="group inline-flex items-center text-sm font-medium text-troiton-purple hover:text-troiton-blue mt-auto"
+              >
+                Explorar Soluções <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+              </button>
             </div>
           </FadeIn>
         </div>
