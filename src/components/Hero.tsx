@@ -4,7 +4,7 @@ import { FadeIn } from "./animations/FadeIn";
 import { ArrowRight, Cpu, Server, Monitor, Printer, PlugZap, Shield, Database } from "lucide-react";
 import { Link } from "react-router-dom";
 export function Hero() {
-  return <section id="home" className="relative pt-32 pb-16 md:pt-40 md:pb-32 overflow-hidden">
+  return <section id="home" className="relative pt-32 pb-16 md:pt-40 md:pb-32 overflow-hidden" style="padding-top: 64px;">
       {/* Enhanced technology-inspired background elements */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full tech-pattern-grid opacity-10"></div>
